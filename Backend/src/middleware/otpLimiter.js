@@ -3,7 +3,7 @@ const { ipKeyGenerator } = require('express-rate-limit');
 // 1. IP-Based Limiter: Max 5 attempts per IP per 15 minutes
 const otpIpLimiter = rateLimit({
   windowMs: 1 * 60 * 1000, // 15 minutes
-  max: 15,                   // Limit each IP to 5 OTP verification requests per window
+  max: 15,                   // Limit each IP to 15 OTP verification requests per window
   standardHeaders: true,
   legacyHeaders: false,
   message: {
@@ -14,7 +14,7 @@ const otpIpLimiter = rateLimit({
 // 2. Email/Account-Based Limiter: Max 3 failed attempts per target account
 const otpAccountLimiter = rateLimit({
   windowMs: 1 * 60 * 1000, // 5 minutes
-  max: 30,                   // Allow 3 attempts per email address
+  max: 30,                   // Allow 30 attempts per email address
   standardHeaders: true,
   legacyHeaders: false,
   // Key generator uses the target email instead of the client IP
