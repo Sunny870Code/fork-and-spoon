@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 const { OAuth2Client } = require("google-auth-library");
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 const crypto = require("crypto");
-const sendOtpEmail = require("../utils/sendEmails.js");
+const {sendOtpEmail} = require("../utils/sendEmails.js");
 const generateOtp = require("../utils/otpGenerator");
 const tokenBlacklistModel = require("../schema/blacklist.schema");
  

@@ -41,7 +41,7 @@ const { Resend } = require('resend');
 // Initialize Resend with your API key
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export const sendOTPEmail = async (email, otp) => {
+const sendOTPEmail = async (email, otp) => {
     try {
         const data = await resend.emails.send({
             // During testing/free tier, Resend provides onboarding@resend.dev
@@ -68,3 +68,5 @@ export const sendOTPEmail = async (email, otp) => {
         return { success: false, error };
     }
 };
+
+module.exports = { sendOTPEmail };
