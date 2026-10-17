@@ -36,7 +36,7 @@
 // }
 
 // module.exports = sendOtpEmail;
-import { Resend } from 'resend';
+const { Resend } = require('resend');
 
 // Initialize Resend with your API key
 const resend = new Resend(process.env.RESEND_API_KEY);
