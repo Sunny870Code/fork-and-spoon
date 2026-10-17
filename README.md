@@ -5,8 +5,8 @@ A modern, full-stack recipe-sharing and culinary community web application desig
 ---
 
 ## 🚀 Live Demo & Screenshots
-* **Live App URL:** [Add your deployed frontend link here]
-* **Backend API URL:** [Add your deployed backend link here]
+* **Live App URL:** https://fork-and-spoon-frontend.vercel.app/
+* **Backend API URL:** https://fork-and-spoon.onrender.com
 
 ---
 
